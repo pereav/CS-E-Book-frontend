@@ -57,16 +57,16 @@ export default {
 			this.$router.push('content')
 		},
 		login() {
-			if (this.$store.getters.BACKEND) {
-				this.$store.dispatch('login', {
-					username: this.username,
-					password: this.password
-				})
-				.then(() => this.goToContent())
-				.catch(() => alert('Invalid username or password'))
-			} else {
+			// if (this.$store.getters.BACKEND) {
+			// 	this.$store.dispatch('login', {
+			// 		username: this.username,
+			// 		password: this.password
+			// 	})
+			// 	.then(() => this.goToContent())
+			// 	.catch(() => alert('Invalid username or password'))
+			// } else {
 				this.goToContent()
-			}
+			// }
 		}
 	}
 }
